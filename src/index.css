@@ -14,6 +14,17 @@
   --color-paper-2: #e8e8e8;
   --color-mute: #afafaf;
 
+  /* Light Theme Colors */
+  --color-light-bg: #f4f6f9;
+  --color-light-bg-2: #eaedf2;
+  --color-light-card: #ffffff;
+  --color-light-border: #e2e6ed;
+  --color-light-border-2: #cbd2dc;
+  --color-light-ink: #0d1117;
+  --color-light-ink-2: #1e2430;
+  --color-light-mute: #586574;
+  --color-light-subtle: #8896a6;
+
   --font-display: "Barlow Condensed", sans-serif;
   --font-sans: "Inter", sans-serif;
 }
@@ -41,6 +52,18 @@ body {
     linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: 56px 56px;
+}
+
+.tex-grid-light {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.tex-dots-light {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.09) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
 }
 
 .tex-noise::after {

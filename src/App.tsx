@@ -1,24 +1,26 @@
 import Nav from "./components/Nav";
 import MobileBar from "./components/MobileBar";
 import Hero from "./components/Hero";
+import CoreTruckSegments from "./components/CoreTruckSegments";
 import VehicleMatcher from "./components/VehicleMatcher";
-import PerformanceSolution from "./components/PerformanceSolution";
-import TruckCategories from "./components/TruckCategories";
+import IntakeAnatomy from "./components/IntakeAnatomy";
+import SoundExperience from "./components/SoundExperience";
+import StockVsApex from "./components/StockVsApex";
 import Brands from "./components/Brands";
 import Installation from "./components/Installation";
 import Applications from "./components/Applications";
+import ReviewsAndBuilds from "./components/ReviewsAndBuilds";
 import WhyUs from "./components/WhyUs";
-import CustomerTrucks from "./components/CustomerTrucks";
 import QuoteSection from "./components/QuoteSection";
 import Footer from "./components/Footer";
 
 const TICKER_ITEMS = [
   "COLD AIR INTAKE SYSTEMS",
-  "PROFESSIONAL INSTALLATION",
-  "GAS + DIESEL TRUCKS",
-  "2020+ PLATFORMS",
-  "FAST SOURCING — TYPICALLY 1–2 DAYS",
-  "FITMENT VERIFIED BEFORE ORDERING",
+  "THE BIG THREE FULL-SIZE GIANTS",
+  "MIDSIZE OFF-ROAD KINGS",
+  "DIESEL HEAVY-DUTY SUBCULTURE",
+  "FAST REGIONAL SOURCING — 1–2 DAYS",
+  "PRO SHOP INSTALLATION & SENSOR VERIFIED",
 ];
 
 function Ticker() {
@@ -46,14 +48,16 @@ export default function App() {
       <main>
         <Hero />
         <Ticker />
+        <CoreTruckSegments />
         <VehicleMatcher />
-        <PerformanceSolution />
-        <TruckCategories />
+        <IntakeAnatomy />
+        <SoundExperience />
+        <StockVsApex />
         <Brands />
         <Installation />
         <Applications />
+        <ReviewsAndBuilds />
         <WhyUs />
-        <CustomerTrucks />
         <QuoteSection />
       </main>
       <Footer />

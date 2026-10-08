@@ -2,10 +2,13 @@ import { useEffect, useState } from "react";
 import { cn } from "../utils/cn";
 
 const LINKS = [
-  { label: "VEHICLES", href: "#vehicles" },
+  { label: "PLATFORMS", href: "#segments" },
+  { label: "MATCHER", href: "#vehicles" },
+  { label: "ANATOMY", href: "#anatomy" },
+  { label: "SOUND & DYNO", href: "#sound" },
   { label: "BRANDS", href: "#brands" },
   { label: "INSTALLATION", href: "#installation" },
-  { label: "ABOUT", href: "#why" },
+  { label: "REVIEWS", href: "#reviews" },
   { label: "CONTACT", href: "#quote" },
 ];
 
@@ -54,21 +57,28 @@ export default function Nav() {
     <>
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 border-b transition-all duration-300",
+          "fixed inset-x-0 top-0 z-50 transition-all duration-300",
           scrolled
-            ? "border-coal-2 bg-ink/90 backdrop-blur-md"
-            : "border-transparent bg-gradient-to-b from-ink/80 to-transparent"
+            ? "border-b border-coal-2 bg-ink/95 shadow-xl backdrop-blur-md"
+            : "border-b border-paper/10 bg-ink/80 backdrop-blur-sm"
         )}
       >
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-20 lg:px-8">
+        {/* top micro announcement bar */}
+        <div className="hidden border-b border-paper/10 bg-coal/80 py-1.5 text-center sm:block">
+          <p className="font-display text-[10px] font-bold tracking-[0.25em] text-paper-2">
+            <span className="text-volt">● IN-STOCK & 1–2 DAY SOURCING</span> &nbsp;|&nbsp; FITMENT VERIFIED BEFORE ORDERING &nbsp;|&nbsp; PRO SHOP INSTALLATION
+          </p>
+        </div>
+
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-18 lg:px-8">
           <Logo />
 
-          <nav className="hidden items-center gap-8 lg:flex">
+          <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">
             {LINKS.map((l) => (
               <a
                 key={l.label}
                 href={l.href}
-                className="group relative font-display text-sm font-semibold tracking-[0.18em] text-paper-2 transition-colors hover:text-volt"
+                className="group relative font-display text-xs font-bold tracking-[0.18em] text-paper-2 transition-colors hover:text-volt"
               >
                 {l.label}
                 <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-volt transition-all duration-300 group-hover:w-full" />
@@ -78,8 +88,14 @@ export default function Nav() {
 
           <div className="flex items-center gap-3">
             <a
+              href="tel:+15555550199"
+              className="hidden font-display text-xs font-bold tracking-[0.15em] text-volt hover:text-volt-2 sm:block"
+            >
+              (555) 555-0199
+            </a>
+            <a
               href="#quote"
-              className="hidden bg-volt px-6 py-2.5 font-display text-sm font-bold tracking-[0.15em] text-ink transition-colors hover:bg-volt-2 sm:inline-block"
+              className="bg-volt px-5 py-2.5 font-display text-xs font-bold tracking-[0.15em] text-ink shadow-md transition-colors hover:bg-volt-2"
             >
               GET A QUOTE
             </a>
@@ -109,35 +125,41 @@ export default function Nav() {
       {/* mobile menu */}
       <div
         className={cn(
-          "fixed inset-0 z-40 bg-ink/98 pt-24 transition-all duration-400 lg:hidden",
+          "fixed inset-0 z-40 bg-ink/98 pt-24 transition-all duration-400 lg:hidden overflow-y-auto",
           open ? "visible opacity-100" : "invisible opacity-0"
         )}
       >
         <div className="tex-grid absolute inset-0 opacity-50" />
-        <nav className="relative flex flex-col px-6">
+        <nav className="relative flex flex-col px-6 pb-12">
           {LINKS.map((l, i) => (
             <a
               key={l.label}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="group flex items-center justify-between border-b border-coal-2 py-5"
-              style={{ transitionDelay: `${i * 40}ms` }}
+              className="group flex items-center justify-between border-b border-coal-2 py-4"
+              style={{ transitionDelay: `${i * 30}ms` }}
             >
-              <span className="font-display text-3xl font-bold tracking-wide text-paper group-hover:text-volt">
+              <span className="font-display text-2xl font-bold tracking-wide text-paper group-hover:text-volt">
                 {l.label}
               </span>
-              <span className="font-display text-sm text-mute">0{i + 1}</span>
+              <span className="font-display text-xs text-mute">0{i + 1}</span>
             </a>
           ))}
           <a
             href="#quote"
             onClick={() => setOpen(false)}
-            className="mt-8 bg-volt py-4 text-center font-display text-lg font-bold tracking-[0.2em] text-ink"
+            className="mt-6 bg-volt py-4 text-center font-display text-base font-bold tracking-[0.2em] text-ink"
           >
             GET A QUOTE
           </a>
+          <a
+            href="tel:+15555550199"
+            className="mt-3 border border-coal-3 py-3.5 text-center font-display text-sm font-bold tracking-[0.2em] text-paper"
+          >
+            CALL SHOP: (555) 555-0199
+          </a>
           <p className="mt-6 text-center text-xs tracking-[0.25em] text-mute">
-            2020+ TRUCKS • GAS + DIESEL
+            2016–2026 TRUCKS • GAS + DIESEL
           </p>
         </nav>
       </div>

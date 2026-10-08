@@ -56,30 +56,31 @@ function CategoryPanel({
 
 export default function TruckCategories() {
   return (
-    <section className="relative bg-ink-2 py-24 lg:py-36">
+    <section className="relative overflow-hidden bg-light-bg py-24 text-light-ink lg:py-36">
+      <div className="tex-dots-light absolute inset-0 opacity-60" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 flex flex-col gap-6 lg:mb-16 lg:flex-row lg:items-end lg:justify-between">
           <Reveal>
             <div className="mb-5 flex items-center gap-3">
-              <span className="font-display text-sm font-bold text-volt">04</span>
-              <span className="h-px w-12 bg-volt/60" />
-              <span className="font-display text-xs font-semibold tracking-[0.35em] text-mute">TRUCK CATEGORIES</span>
+              <span className="font-display text-sm font-bold text-amber-500">04</span>
+              <span className="h-px w-12 bg-amber-400" />
+              <span className="font-display text-xs font-semibold tracking-[0.35em] text-light-mute">TRUCK CATEGORIES</span>
             </div>
-            <h2 className="font-display text-5xl font-bold uppercase leading-[0.9] tracking-tight text-paper sm:text-6xl lg:text-8xl">
+            <h2 className="font-display text-5xl font-bold uppercase leading-[0.9] tracking-tight text-light-ink sm:text-6xl lg:text-8xl">
               Built around
               <br />
-              <span className="text-volt">your platform.</span>
+              <span className="text-amber-500">your platform.</span>
             </h2>
           </Reveal>
           <Reveal delay={150}>
-            <p className="max-w-sm border-l-2 border-volt pl-5 text-base leading-relaxed text-mute">
+            <p className="max-w-sm border-l-2 border-amber-400 pl-5 text-base leading-relaxed text-light-mute">
               Roughly 80% of what we do is trucks — full-size, heavy-duty and
               mid-size platforms from 2020 and up.
             </p>
           </Reveal>
         </div>
 
-        <div className="grid gap-4 lg:grid-cols-12 lg:grid-rows-2">
+        <div className="grid gap-5 lg:grid-cols-12 lg:grid-rows-2">
           <Reveal className="lg:col-span-7 lg:row-span-2">
             <CategoryPanel
               large

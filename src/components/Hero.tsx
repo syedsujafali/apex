@@ -78,11 +78,31 @@ export default function Hero() {
         </Reveal>
 
         <Reveal delay={480}>
-          <div className="mt-10 flex items-center gap-3 border-t border-paper/10 pt-6">
-            <span className="h-1.5 w-1.5 bg-volt" />
-            <p className="font-display text-[11px] font-semibold tracking-[0.3em] text-mute sm:text-xs">
-              2020+ TRUCKS &nbsp;•&nbsp; GAS + DIESEL &nbsp;•&nbsp; PROFESSIONAL INSTALLATION
-            </p>
+          <div className="mt-12 grid grid-cols-2 gap-3 border-t border-paper/10 pt-8 sm:grid-cols-4 sm:gap-4">
+            <div className="border border-coal-3/80 bg-ink/70 p-3.5 backdrop-blur-md">
+              <span className="font-display text-2xl font-bold text-volt sm:text-3xl">500+</span>
+              <p className="mt-0.5 font-display text-[10px] font-semibold tracking-[0.2em] text-mute">
+                TRUCKS EQUIPPED
+              </p>
+            </div>
+            <div className="border border-coal-3/80 bg-ink/70 p-3.5 backdrop-blur-md">
+              <span className="font-display text-2xl font-bold text-paper sm:text-3xl">1–2 DAY</span>
+              <p className="mt-0.5 font-display text-[10px] font-semibold tracking-[0.2em] text-mute">
+                SOURCING SPEED
+              </p>
+            </div>
+            <div className="border border-coal-3/80 bg-ink/70 p-3.5 backdrop-blur-md">
+              <span className="font-display text-2xl font-bold text-volt sm:text-3xl">100%</span>
+              <p className="mt-0.5 font-display text-[10px] font-semibold tracking-[0.2em] text-mute">
+                FITMENT VERIFIED
+              </p>
+            </div>
+            <div className="border border-coal-3/80 bg-ink/70 p-3.5 backdrop-blur-md">
+              <span className="font-display text-2xl font-bold text-paper sm:text-3xl">4.9 ★</span>
+              <p className="mt-0.5 font-display text-[10px] font-semibold tracking-[0.2em] text-mute">
+                CUSTOMER RATING
+              </p>
+            </div>
           </div>
         </Reveal>
       </div>
